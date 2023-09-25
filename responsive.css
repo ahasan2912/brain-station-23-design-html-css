@@ -15,6 +15,15 @@
     .patner{
         padding: 20px 22%;
     }
+    .contact-section{
+        padding: 20px 22%;
+    }
+    .contact-col{
+        padding: 50px 0px;
+    }
+    .background-animation{
+        height: 60vh;
+    }
 }
 @media (min-width: 1282px) and (max-width: 1705px) {
     nav{
@@ -141,8 +150,138 @@
     .parner-img{
         margin-top: 45px;
     }
+    .contact-col{
+       flex-direction: column;
+    }
+    .second{
+        margin-left: 0px;
+    }
+    .first-col{
+        width: 100%;
+    }
+    .first-col img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .icon-connection{
+        display: flex;
+        margin: 50px 0;
+    }
+    .second-col{
+        width: 100%;
+    }
+    .third-col{
+        margin-bottom: 60px;
+    }
+    /* -------------------------- humbarger-menu----------------------- */
+    .humbarger-menu{
+        position: relative;
+    }
+    .menubar{
+        display: flex;
+        flex-direction: column;
+        background: rgb(240, 237, 237);
+        position: absolute;
+        top: 48px;
+        right: -20px;
+        width: 250px;
+        height: 100vh;
+        text-align: left;
+        z-index: 90;
+        transform: translateY(-120%);
+        transition: 0.5s ease-in-out;
+    }
+    .menubar li{
+        display: block;
+        margin-top: 16px;
+    }
+    .menubar li a{
+        display: block;
+        font-size: 18px;
+    }
+    .humbarger-menu input[type="checkbox"]{
+        display: block;
+        width: 36px;
+        height: 28px;
+        position: absolute;
+        top: -20px;
+        right: 2px;
+        z-index: 10;
+        opacity: 0;
+    }
+    .humbarger-line{
+        position: absolute;
+        top: -20px;
+        right: 2px;
+        width: 36px;
+        height: 28px;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .humbarger-line .line{
+        display: block;
+        background: #0A9FDA;
+        width: 100%;
+        height: 5px;
+        border-radius: 10px;
+    }
+    
+    .humbarger-menu input[type="checkbox"]:checked ~ .menubar{
+        display: block;
+        transform: translateY(0%);
+        transition: 0.5s ease-out;
+    }
+    .humbarger-line .line1{
+        transform-origin: 0% 0%;
+    }
+    .humbarger-line .line3{
+        transform-origin: 0% 100%;
+    }
+    .humbarger-menu input[type="checkbox"]:checked ~ .humbarger-line .line1{
+        transform: rotate(45deg);
+    }
+    .humbarger-menu input[type="checkbox"]:checked ~ .humbarger-line .line2{
+        display: none;
+    }
+    .humbarger-menu input[type="checkbox"]:checked ~ .humbarger-line .line3{
+        transform: rotate(-45deg);
+    }
+    .menubar li a:hover::after{
+        width: 0%;
+    }
+    .menubar li a:hover{
+        color: red;
+    }
+    .services{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+        width: 320px;
+        height: 600px;
+        padding: 20px;
+        top: 140px;
+        left: 0%;
+        transform: translateX(-15%);
+    }
+    .industries{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+        width: 320px;
+        padding: 10px;
+        top: 270px;
+        left: 0%;
+        transform: translateX(-35%);
+    }
+    .about{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+        width: 320px;
+        height: 200px;
+        padding: 10px;
+        top: 370px;
+        left: 0%;
+        transform: translateX(-35%);
+    }
 }
-@media (min-width:300px) and (max-width:500px) {
+@media (min-width:320px) and (max-width:500px) {
     .client-video{
         width: 100%;
         height: 300px;
@@ -153,5 +292,41 @@
     }
     .client{
         padding: 20px 0%;
+    }
+    nav .logo{
+        width: 250px;
+    }
+    .menubar{
+        top: 43px;
+        right: -20px;
+        width: 220px;
+    }
+    .menubar li{
+        display: block;
+        margin-top: 0px;
+    }
+    .services{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+        width: 320px;
+        height: 500px;
+        padding: 20px;
+        top: 100px;
+        left: 20%;
+    }
+    .industries{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+        width: 320px;
+        padding: 10px;
+        top: 170px;
+        left: 0%;
+        transform: translateX(-35%);
+    }
+    .about{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+        width: 320px;
+        padding: 10px;
+        top: 270px;
+        left: 0%;
+        transform: translateX(-35%);
     }
 }

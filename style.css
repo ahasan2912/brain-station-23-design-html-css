@@ -44,6 +44,10 @@ nav .menubar li .last-child i{
     color: #706c6c;
     font-size: 17px;
 }
+/* ------------------------------------------ Humbarger-menu------------------------------------------ */
+.humbarger-menu input[type="checkbox"]{
+    display: none;
+}
 /* ----------------------------------------- Hover Effect under of list----------------------------------- */
 .services{
     display: none;
@@ -102,7 +106,6 @@ nav .menubar li .last-child i{
     transform: translateX(70%);
     z-index: 30;
 }
-
 .menubar li:hover .about{
     display: grid;
 }
@@ -455,4 +458,71 @@ nav .menubar li .last-child i{
 }
 .parner-img img{
     width: 100%;
+}
+/* ------------------------------------ contact-section -------------------------------------*/
+.contact-section{
+    background: #0E1D45;
+    margin-top: 30px;
+    font-family: 'Barlow', sans-serif;
+}
+.contact-col{
+    padding: 70px 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.first-col{
+    width: 25%;
+}
+.first-col img{
+    width: 250px;
+    margin-bottom: 10px;
+}
+.first-col p{
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 40px;
+    line-height: 25px;
+}
+.icon-connection{
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.icon-connection span{
+    margin-right: 10px;
+    background: #38466d;
+    padding: 8px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 17px;
+}
+.icon-connection span:hover{
+    background: #009FDB;
+}
+.second-col{
+    width: 20%;
+    color: #fff;
+}
+.second{
+    margin-left: 80px;
+}
+.second-col h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 550;
+}
+.second-col p{
+    font-size: 14px;
+    line-height: 35px;
+}
+.third-col{
+    margin-top: 45px;
+}
+.fourth-col{
+    width: 25%;
+    margin-bottom: 40px;
+}
+.fourth-col h4{
+    margin-top: -1px;
 }
