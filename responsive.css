@@ -312,6 +312,7 @@
         padding: 20px;
         top: 100px;
         left: 20%;
+        transform: translateX(-45%);
     }
     .industries{
         grid-template-columns: repeat(2,minmax(100px,1fr));
