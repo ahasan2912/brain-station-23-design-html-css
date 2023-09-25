@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Saira:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Saira:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;500;600&family=Roboto+Condensed:wght@700&family=Saira:wght@300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* -----------------------------------------Navbar------------------------------------------ */
+nav{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 3%;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0,0.1);
+    z-index: 100;
+}
+nav .logo{
+    width: 300px;
+}
+nav .menubar{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav .menubar li{
+    list-style: none;
+    /* margin-right: 30px; */
+    padding: 15px 20px;
+}
+nav .menubar li a{
+    font-size: 18px;
+    color: #009FDB;
+    text-decoration: none;
+}
+nav .menubar li a i{
+    font-size: 13px;
+    margin-left: 5px;
+}
+nav .menubar li .last-child i{
+    color: #706c6c;
+    font-size: 17px;
+}
+/* ----------------------------------------- Hover Effect under of list----------------------------------- */
+.services{
+    display: none;
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(6,minmax(200px,1fr));
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0,0.3);
+    width: 420px;
+    height: 400px;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+}
+.service-menubar-one li{
+    margin-bottom: 0px;
+}
+.service-menubar-two li{
+    margin-bottom: 3px;
+}
+.menubar li:hover .services{
+    display: grid;
+}
+.industries{
+    display: none;
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(6,minmax(200px,1fr));
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0,0.3);
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-20%);
+    z-index: 30;
+}
+.menubar li:hover .industries{
+    display: grid;
+}
+.about{
+    display: none;
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(6,minmax(200px,1fr));
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0,0.3);
+    width: 300px;
+    height: 120px;
+    padding: 15px 0px 15px 0px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(70%);
+    z-index: 30;
+}
+
+.menubar li:hover .about{
+    display: grid;
+}
+/* ----------------------------------Section---------------------------------- */
+.background-animation{
+    background-image: url(image/banner1.PNG);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    animation-name: background-animated;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+@keyframes background-animated {
+    0% {
+        background-image: url(image/banner1.PNG);
+    }
+    33.33% {
+        background-image: url(image/banner2.PNG);
+    }
+    66.67% {
+        background-image: url(image/banner3.PNG);
+    }
+    100% {
+       /* transform: scale(1.1); */
+    }
+}
+/* -------------------------------------- rating section ----------------------------------- */
+.rating-icon{
+    padding: 20px 10%;
+}
+.rating-icon-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px;
+}
+.rating-icon-img div{
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.rating-icon-img div h3{
+    font-size: 40px;
+    color: #009FDB;
+    margin: 15px  0px 10px 0;
+}
+.rating-icon-img div p{
+    font-size: 16px;
+    font-weight: 550;
+}
+/* ------------------------------------- Client Section--------------------------------- */
+.client-section{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: 'Barlow', sans-serif;
+}
+.client{
+    margin-top: 100px;
+}
+.client-text{
+    width: 30%;
+}
+.client-text h1{
+    font-size: 50px;
+    padding: 0px 20% 0px 0px;
+    margin-bottom: 15px;
+}
+.client-text .line{
+    width: 40px;
+    display: block;
+    background: black;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.client-text p{
+    font-size: 20px;
+    line-height: 40px;
+    word-spacing: 3px;
+    margin-bottom: 50px;
+}
+.client-text p span{
+    font-weight: 700;
+}
+.primary-btn{
+    padding: 8px 20px;
+    background: #0A9FDA;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 550;
+    font-size: 14px;
+    text-align: center;
+    transition: 1s ease-in-out;
+}
+.primary-btn:hover{
+    /* padding: 7px 16px; */
+    font-size: 11px;
+}
+.client-video{
+    width: 70%;
+    background-color: #0274be;
+    height: 500px;
+    position: relative;
+}
+.client-video video{
+    width: 90%;
+    position: absolute;
+    top: 13%;
+    left: 10%;
+}
+/* -----------------------------------technology-partner----------------------------*/
+.technology-partner{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+}
+.technology-partner h1{
+    font-size: 50px;
+    margin-top: 50px;
+}
+.technology-partner img{
+    width: 250px;
+    margin: 80px 0;
+}
+/* --------------------------------------- many-icon --------------------------------------- */
+.category-iocn{
+    background: #0E1D45;
+}
+.icon-img{
+    padding: 5% 12%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 100px;
+    grid-column-gap: 20px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+}
+.icon-img div img{
+    width: 35px;
+}
+.icon-img div h4{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.client-protfolio h1:first-child{
+    margin-bottom: 150px;
+}
+.client-protfolio h1:last-child{
+    margin-bottom: 40px;
+}
+/* -------------------------------------------Achivement----------------------------------------- */
+.achivement{
+    padding: 20px 3%;
+}
+.achivement-part{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(300px,1fr));
+}
+.germany{
+    background-image:linear-gradient(RGBA(255,139,95,0.27),RGBA(255,139,95,0.27)),url(image/gental-men.PNG);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+.germany:hover{
+    background-image: url(image/gental-men.PNG);
+}
+.germany-text{
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  position: absolute;
+  top: 30%;
+}
+.germany-text h1{
+    color: #fff; 
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.germany-text p{
+    padding: 0 15%;
+    color: #fff;
+    line-height: 35px;
+    font-size: 20px;
+}
+.two-country{
+    display: flex;
+    flex-direction: column;
+}
+.norway{
+    background-image:linear-gradient(rgba(11, 15, 241, 0.30),rgba(11, 15, 241, 0.30)),url(image/norway.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+.norway:hover{
+    background-image: url(image/norway.jpg);
+}
+.norway-text{
+    text-align: center;
+  font-family: 'Barlow', sans-serif;
+  position: absolute;
+  top: 30%;
+}
+.norway-text h1{
+    color: #fff; 
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.norway-text p{
+    padding: 0 15%;
+    color: #fff;
+    line-height: 25px;
+    font-size: 20px;
+}
+/* .norway:hover{
+    animation:hover-animation 3s normal ease infinite;
+    background-image: url(image/norway.jpg);
+} */
+.caribbeans{
+    background-image:linear-gradient(rgba(11,15,241,0.30),rgba(11,15,241,0.30)),url(image/caribbenans.jpg);
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+}
+.caribbeans:hover{
+    background-image: url(image/caribbenans.jpg);
+}
+/* --------------------------- blog Post ------------------------------------- */
+.Blog-post{
+    padding: 20px 7%;
+    margin-top: 50px;
+}
+.blog-post-div{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(250px,1fr));
+    grid-template-rows: repeat(2,minmax(300px,1fr));
+    grid-gap: 30px;
+}
+.blog{
+    font-family: 'Barlow', sans-serif;
+    margin-top: 20px;
+}
+.blog div{
+    display: flex;
+    align-items: center;
+}
+.blog .line1{
+    width: 70px;
+    display: block;
+    background: #009FDB;
+    height: 2px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.blog p{
+    color: #009FDB;
+    margin-left: 10px;
+}
+.blog h1{
+    font-size: 52px;
+    margin-top: 10px;
+}
+.blog-post-partision{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.10);
+    font-family: 'lato', sans-serif;
+    position: relative;
+}
+.blog-post-partision:hover{
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.5);
+}
+.child-3rd div{
+    position: absolute;
+    bottom: 0;
+}
+.child-4th div{
+    position: absolute;
+    top: 55%;
+}
+.blog-post-partision div{
+    padding: 35px 30px;
+    text-align: center;
+    font-size: 20px;
+}
+.blog-post-partision img{
+    width: 100%;
+}
+/* ----------------------------Join Patner----------------------------- */
+.patner{
+    padding: 20px 7%;
+    margin-top: 20px;
+    font-family: 'Barlow', sans-serif;
+}
+.patner-join{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.patner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+}
+.patner-text h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.patner-text p{
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+.patner-text .btn-2{
+    padding: 15px 35px;
+    background: #0A9FDA;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: all .5s ease-in-out;
+    border-radius: 2px;
+}
+.patner-text .btn-2:hover{
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.parner-img img{
+    width: 100%;
+}
